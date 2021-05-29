@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/k8s-fleetman-api-gateway/fleetman.iml" filepath="$PROJECT_DIR$/k8s-fleetman-api-gateway/fleetman.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/k8s-fleetman.iml" filepath="$PROJECT_DIR$/.idea/k8s-fleetman.iml" />
+      <module fileurl="file://$PROJECT_DIR$/k8s-fleetman-position-tracker/positionreceiver.iml" filepath="$PROJECT_DIR$/k8s-fleetman-position-tracker/positionreceiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/k8s-fleetman-position-simulator/positionsimulator.iml" filepath="$PROJECT_DIR$/k8s-fleetman-position-simulator/positionsimulator.iml" />
+    </modules>
+  </component>
+</project>

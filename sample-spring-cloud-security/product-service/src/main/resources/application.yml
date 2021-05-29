@@ -1,0 +1,40 @@
+spring:  
+  application:
+    name: product-service
+  cloud:
+    config:
+      failFast: true
+      uri: https://localhost:8888
+      tls:
+        enabled: true
+        key-store: classpath:/product.jks
+        key-store-password: 123456
+        key-password: 123456
+        trust-store: classpath:/product.jks
+        trust-store-password: 123456
+  config:
+    import: optional:configserver:https://localhost:8888
+
+server:  
+  port: ${PORT:8093}
+  ssl:
+    enabled: true
+    key-store: classpath:product.jks
+    key-store-password: 123456
+    key-alias: product
+    
+security:
+  require-ssl: true
+  
+eureka:
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    securePort: ${PORT:8093}
+    statusPageUrl: https://localhost:${eureka.instance.securePort}/info
+    healthCheckUrl: https://localhost:${eureka.instance.securePort}/health
+    homePageUrl: https://localhost:${eureka.instance.securePort}
+  client:
+    securePortEnabled: true
+    serviceUrl:
+      defaultZone: https://localhost:8761/eureka/
